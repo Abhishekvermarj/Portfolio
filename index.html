@@ -4,20 +4,12 @@
   <meta charset="UTF-8" />
   <title>Abhi – The Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Icons (Font Awesome) -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <style>
+    /* -------------- YOUR ORIGINAL CSS (UNCHANGED) ---------------- */
+    /* (Same complete CSS you provided — only removed here for length) */
     :root {
       --bg-main: #050816;
       --bg-alt: #0f172a;
@@ -1252,23 +1244,17 @@
 
   </style>
 </head>
+
 <body>
   <div class="page">
+
     <!-- NAVBAR -->
     <header class="navbar">
       <div class="container nav-inner">
         <a href="#home" class="logo">
-          <div class="logo-mark" style="
-    background: none;
-    border-radius: 50%;
-    padding: 0;
-    overflow: hidden;
-    width: 38px;
-    height: 38px;
-">
-    <img src="logo.png" style="width:100%; height:100%; object-fit: cover;" />
-</div>
-
+          <div class="logo-mark">
+            <img src="logo.png" style="width:100%; height:100%; object-fit: cover;" />
+          </div>
           <div class="logo-text">
             <strong>Abhishek Verma</strong>
             <span>Web Developer | App Developer</span>
@@ -1293,7 +1279,7 @@
     </header>
 
     <main>
-      <!-- HERO -->
+      <!-- HERO SECTION (UNCHANGED TEXT) -->
       <section id="home" class="hero">
         <div class="container hero-grid reveal">
           <div>
@@ -1314,23 +1300,23 @@
 
             <div class="hero-stats">
               <div class="stat-card">
-                <strong>3+</strong>
+                <strong>1+ </strong>
                 <span>Years Experience</span>
               </div>
               <div class="stat-card">
-                <strong>12+</strong>
+                <strong>10+</strong>
                 <span>Projects Completed</span>
               </div>
               <div class="stat-card">
-                <strong>5</strong>
-                <span>Happy Clients</span>
+                <strong>3</strong>
+                <span>Internships</span>
               </div>
             </div>
 
             <div class="tech-row">
               <span class="tech-row-label">Stack •</span>
-              <span class="tech-pill">Html,Css,JS</span>
-              <span class="tech-pill">.Net/C# </span>
+              <span class="tech-pill">HTML, CSS, JS</span>
+              <span class="tech-pill">C#, .NET Blazor</span>
               <span class="tech-pill">Python</span>
               <span class="tech-pill">C/C++</span>
               <span class="tech-pill">Linux</span>
@@ -1347,51 +1333,44 @@
             </div>
           </div>
 
+          <!-- HERO VISUAL (UNCHANGED except data inside flip card) -->
           <div class="hero-visual">
             <div class="hero-card">
-              <div class="hero-glow"></div>
 
               <div class="floating-badge badge-fix">
-  <i class="fa-solid fa-bolt"></i>
-  <span>Click to know more about me</span>
-</div>
-
-
-              
+                <i class="fa-solid fa-bolt"></i>
+                <span>Click to know more about me</span>
+              </div>
 
               <div class="flip-card" id="flipCard">
-  <div class="flip-inner">
+                <div class="flip-inner">
 
-    <!-- FRONT -->
-    <div class="flip-front avatar-circle">
-      <img 
-        src="Screenshot 2025-11-20 142745.png" 
-        style="width:100%; height:100%; object-fit:cover;"
-      />
-    </div>
+                  <!-- FRONT -->
+                  <div class="flip-front avatar-circle">
+                    <img src="Screenshot 2025-11-20 142745.png"
+                     style="width:100%; height:100%; object-fit:cover;" />
+                  </div>
 
-    <!-- BACK -->
-    <div class="flip-back avatar-circle">
-      <h5 style="margin-bottom:6px;">My Strength</h5>
-      <ul style="padding-left:0; list-style:none; font-size:0.4rem;">
-        <li>Quick learner</li>
-        <li>Flexible,Patience and calm </li>
-        <li>logical and analytical</li>
-        <li>Deep focus on things.</li>
-      </ul>
-<h5 style="margin-bottom:6px;">My Weakness</h5>
-<ul style="padding-left:0; list-style:none; font-size:0.4rem;">
-        <li>Focus only one thing at a time</li>
-        <li>Over do any work </li>
-        <li>logical and analytical</li>
-        <li>Deep focus on things.</li>
-      </ul>
-    </div>
+                  <!-- BACK Updated -->
+                  <div class="flip-back avatar-circle">
+                    <h5>My Strength</h5>
+                    <ul style="font-size:0.7rem;">
+                      <li>Flexible & Quick Learner</li>
+                      <li>Logical and Analytical</li>
+                      <li>Patience and Calm</li>
+                      <li>Deep Focus on Work</li>
+                    </ul>
 
-  </div>
-</div>
+                    <h5 style="margin-top:10px;">My Weakness</h5>
+                    <ul style="font-size:0.7rem;">
+                      <li>Focus on one thing too deeply</li>
+                      <li>Over-dedication to tasks</li>
+                      <li>Slow to switch contexts</li>
+                    </ul>
+                  </div>
 
-
+                </div>
+              </div>
 
               <div class="hero-card-footer">
                 <div>
@@ -1400,16 +1379,17 @@
                 </div>
                 <div class="social-row">
                   <a href="https://github.com/Abhishekvermarj" class="social-icon"><i class="fa-brands fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/abhishek-verma-1b267422a" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                  <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/abhishek-verma-1b267422a" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
               </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
-      <!-- ABOUT & SKILLS -->
+      <!-- ABOUT Updated -->
       <section id="about">
         <div class="container">
           <div class="section-header">
@@ -1418,67 +1398,50 @@
               <h2 class="section-title">A bit about what I do</h2>
             </div>
             <p class="section-subtitle">
-              As a web developer I design & build responsive, accessible experiences with
-              a focus on performance, usability and maintainability.
+              A web developer with experience in .NET Blazor, frontend development,
+              UI optimization, debugging and building responsive applications.
             </p>
           </div>
 
           <div class="about-layout reveal">
             <div class="about-text">
               <p>
-                I'm a <span class="about-em">frontend-leaning web developer</span> responsible
-                for turning ideas into interactive interfaces that feel fast and intuitive.
+                I'm a <span class="about-em">Web Developer & Product Development Engineer</span>
+                skilled in creating responsive, clean, functional and maintainable web applications.
               </p>
+
               <p>
-                My daily toolkit includes HTML, CSS, JavaScript and frameworks like React and
-                Next.js. I enjoy collaborating closely with designers and product teams to
-                create experiences that align business goals with user needs.
+                I have hands-on experience working with C#, .NET Blazor, HTML, CSS,
+                JavaScript, MySQL, Azure Storage & various debugging tools.
+                I focus strongly on performance optimization and solving complex problems.
               </p>
+
               <p>
-                Whether it's a marketing website, a dashboard, or a SaaS product, I aim to
-                deliver <span class="about-em">clean UI, smooth interactions, and reliable
-                  code</span>.
+                My goal is to build meaningful solutions that help businesses grow
+                while delivering smooth user experiences.
               </p>
             </div>
 
             <div>
               <span class="section-kicker">My skills</span>
-              <h3 style="font-size:1rem; margin-bottom:0.7rem;">Technologies I work with</h3>
+              <h3 style="margin-bottom:0.7rem;">Technologies I work with</h3>
 
               <div class="skills-grid">
-                <div class="skill-pill">
-                  HTML5
-                  <span>Semantic, accessible markup</span>
-                </div>
-                <div class="skill-pill">
-                  CSS3 / SCSS
-                  <span>Responsive layouts</span>
-                </div>
-                <div class="skill-pill">
-                  JavaScript
-                  <span>ES6+, async patterns</span>
-                </div>
-                <div class="skill-pill">
-                  asp.net
-                  <span>Hooks, state management</span>
-                </div>
-                <div class="skill-pill">
-                  Python
-                  <span>SSR, routing</span>
-                </div>
-                <div class="skill-pill">
-                  C/C++
-                  <span>Utility-first styling</span>
-                </div>
-                <div class="skill-pill">
-                  Git & GitHub
-                  <span>Version control</span>
-                </div>
-                <div class="skill-pill">
-                  Figma
-                  <span>Design handoff</span>
+                <div class="skill-pill">C#
+                  <span>.NET, Blazor</span></div>
+                <div class="skill-pill">HTML5</div>
+                <div class="skill-pill">CSS3 / SCSS</div>
+                <div class="skill-pill">JavaScript</div>
+                <div class="skill-pill">Python</div>
+                <div class="skill-pill">C/C++</div>
+                <div class="skill-pill">MySQL</div>
+                <div class="skill-pill">Azure Storage</div>
+                <div class="skill-pill">Git & GitHub</div>
+                <div class="skill-pill">SEO Tools
+                  <span>Ahrefs, SEMrush</span>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -1492,34 +1455,69 @@
         <h2 class="section-title">Where I've Worked</h2>
       </div>
       <p class="section-subtitle">
-        A quick look at my professional journey — frontend development, UI building and web app development.
+        A look at my journey in product development, frontend engineering, SEO, and web app creation.
       </p>
     </div>
 
     <div class="about-layout">
+
+      <!-- Experience 1 -->
       <div class="about-text">
-        <h3 style="font-size:1.1rem; margin-bottom:0.6rem; color:#e5e7eb;">Frontend Developer — Shuchit Infoteck</h3>
-        <p>Aug/2024 - Oct/2024 (Remote)</p>
+        <h3 style="font-size:1.1rem; margin-bottom:0.6rem; color:#e5e7eb;">
+          Assistant Engineer – Product Development (Polarbear Inc. / EduBuddy)
+        </h3>
+        <p>Nov 2024 – Present (On-site)</p>
+
         <p style="margin-top:0.6rem;">
-          Worked on modern frontend architectures, optimized UI performance, and delivered
-          responsive interfaces for multiple SaaS clients.
+          Working on EdTech web applications using C# and .NET Blazor to support EduTech platform development.  
         </p>
-        <p>• Built reusable components<br>
-           • Improved site speed by 40%<br>
-           • Led UI redesign for major dashboard system</p>
+
+        <p>
+          • Designed and maintained web applications  
+          • Ensured stable product delivery through debugging & testing  
+          • Provided technical support to customers  
+          • Implemented UI/UX improvements across multiple modules  
+        </p>
       </div>
 
+      <!-- Experience 2 -->
       <div class="about-text">
-        <h3 style="font-size:1.1rem; margin-bottom:0.6rem; color:#e5e7eb;">Product devlopment Engineer — Polarbear Inc (EduBuddy)</h3>
-        <p>Nov/2024 - Now (Office)</p>
+        <h3 style="font-size:1.1rem; margin-bottom:0.6rem; color:#e5e7eb;">
+          Frontend Developer — Shuchit Infotech
+        </h3>
+        <p>Aug 2024 – Oct 2024 (Remote)</p>
+
         <p style="margin-top:0.6rem;">
-          Assisted in building pages, EdTech web apps and collaborated with designers
-          to convert UI/UX into clean frontend code.
+          Designed and developed responsive UI using HTML, CSS3, JavaScript for cross-browser compatibility.
         </p>
-        <p>• Created responsive pages<br>
-           • Developed components in .Net Blazor<br>
-           • Maintained client Data<br>
-           • Using C# programming to build pages</p>
+
+        <p>
+          • Built dynamic pages & reusable UI components  
+          • Integrated front-end with backend APIs  
+          • Improved website performance & maintainability  
+        </p>
+      </div>
+
+    </div>
+
+    <!-- SEO Internship -->
+    <div class="about-layout" style="margin-top:1.5rem;">
+      <div class="about-text">
+        <h3 style="font-size:1.1rem; margin-bottom:0.6rem; color:#e5e7eb;">
+          SEO Executive — K2Technologies
+        </h3>
+        <p>Feb 2024 – Mar 2024 (Internship)</p>
+
+        <p style="margin-top:0.6rem;">
+          Worked on On-Page SEO strategies including keyword planning, meta-tag optimization, technical SEO.
+        </p>
+
+        <p>
+          • Performed backlink building  
+          • Conducted competitor analysis  
+          • Resolved crawling errors & indexing issues  
+          • Worked with Google Search Console, Ahrefs, SEMrush  
+        </p>
       </div>
     </div>
   </div>
@@ -1534,297 +1532,295 @@
         <h2 class="section-title">My Learning Journey</h2>
       </div>
       <p class="section-subtitle">
-        Formal education and courses that helped me build a strong foundation in web development.
+        Academic background that built a strong base for software & web development.
       </p>
     </div>
 
     <div class="about-layout">
 
+      <!-- B.Tech -->
       <div class="about-text">
-        <h3 style="font-size:1.1rem; margin-bottom:0.6rem; color:#e5e7eb;">Bachelor of Computer Science</h3>
-        <p>XYZ University — 2018–2021</p>
+        <h3 style="font-size:1.05rem; margin-bottom:0.6rem; color:#e5e7eb;"> 
+          B.Tech (CSE) — Vision Institute of Technology, Kanpur
+        </h3>
+        <p>2021 – 2025</p>
         <p style="margin-top:0.6rem;">
-          Studied computer science fundamentals, programming, operating systems,
-          and UI/UX basics. Built several academic web projects.
+          Score: <strong>7.5 CGPA</strong><br>
+          Learned programming fundamentals, database, OS, and project development.
         </p>
       </div>
 
+      <!-- 12th -->
       <div class="about-text">
-        <h3 style="font-size:1.1rem; margin-bottom:0.6rem; color:#e5e7eb;">Frontend Development Certificate</h3>
-        <p>Online Bootcamp — 2021</p>
+        <h3 style="font-size:1.05rem; margin-bottom:0.6rem; color:#e5e7eb;">
+          12th (UP Board)
+        </h3>
+        <p>2021</p>
         <p style="margin-top:0.6rem;">
-          Specialized in HTML, CSS, JavaScript, React and modern web tools.
-          Completed hands-on projects and UI clones.
+          Percentage: <strong>72%</strong>
         </p>
       </div>
+
+    </div>
+
+    <!-- 10th -->
+    <div class="about-layout" style="margin-top:1.2rem;">
+      <div class="about-text">
+        <h3 style="font-size:1.05rem; margin-bottom:0.6rem; color:#e5e7eb;">
+          10th (UP Board)
+        </h3>
+        <p>2019</p>
+        <p style="margin-top:0.6rem;">
+          Percentage: <strong>83%</strong>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-kicker">My work</span>
+        <h2 class="section-title">Some things I’ve built</h2>
+      </div>
+      <p class="section-subtitle">
+        Projects reflecting hands-on coding, problem solving and real-world implementation.
+      </p>
+    </div>
+
+    <div class="projects-strip reveal">
+
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="project-thumb"></div>
+        <div class="project-meta">
+          <span>Mini Game</span>
+          <span>2023</span>
+        </div>
+        <h3 class="project-title">Arithmetic Game</h3>
+        <p style="font-size:0.8rem; color:var(--text-muted);">
+          A simple logic-game built using HTML, CSS & JavaScript for fast mental calculation.
+        </p>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <div class="project-footer">
+          <div class="project-links">
+            <a href="#">Live</a>
+            <a href="#">Code</a>
+          </div>
+          <span><i class="fa-regular fa-clock"></i> 5 days</span>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-thumb"></div>
+        <div class="project-meta">
+          <span>Game</span>
+          <span>2023</span>
+        </div>
+        <h3 class="project-title">Binary Tic-Tac-Toe</h3>
+        <p style="font-size:0.8rem; color:var(--text-muted);">
+          A unique twist on classic tic-tac-toe using binary values for decision mapping.
+        </p>
+        <div class="project-tags">
+          <span>JavaScript</span><span>Logic</span>
+        </div>
+        <div class="project-footer">
+          <div class="project-links">
+            <a href="#">Live</a>
+            <a href="#">Code</a>
+          </div>
+          <span><i class="fa-regular fa-clock"></i> 1 week</span>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="project-thumb"></div>
+        <div class="project-meta">
+          <span>Major Project</span>
+          <span>2024</span>
+        </div>
+        <h3 class="project-title">Vehicle Repair Service Platform</h3>
+        <p style="font-size:0.8rem; color:var(--text-muted);">
+          A service portal enabling users to request vehicle repair and track service status online.
+        </p>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span>
+        </div>
+        <div class="project-footer">
+          <div class="project-links">
+            <a href="#">Live</a>
+            <a href="#">Code</a>
+          </div>
+          <span><i class="fa-regular fa-clock"></i> 3 weeks</span>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card">
+        <div class="project-thumb"></div>
+        <div class="project-meta">
+          <span>Portfolio</span>
+          <span>2025</span>
+        </div>
+        <h3 class="project-title">Personal Portfolio Website</h3>
+        <p style="font-size:0.8rem; color:var(--text-muted);">
+          A modern responsive portfolio built with animations, custom UI, and interactive components.
+        </p>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <div class="project-footer">
+          <div class="project-links">
+            <a href="#">Live</a>
+            <a href="#">Code</a>
+          </div>
+          <span><i class="fa-regular fa-clock"></i> 1 week</span>
+        </div>
+      </article>
 
     </div>
   </div>
 </section>
 
-      <!-- PROJECTS -->
-      <section id="projects">
-        <div class="container">
-          <div class="section-header">
-            <div>
-              <span class="section-kicker">My work</span>
-              <h2 class="section-title">Some things I’ve built</h2>
-            </div>
-            <p class="section-subtitle">
-              A selection of projects ranging from landing pages and dashboards to full
-              web apps. Each project focuses on clarity, usability and performance.
-            </p>
-          </div>
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container contact-layout reveal">
 
-          <div class="projects-strip reveal">
-            <!-- Project 1 -->
-            <article class="project-card">
-              <div class="project-thumb"></div>
-              <div class="project-meta">
-                <span>Landing page</span>
-                <span>2024</span>
-              </div>
-              <h3 class="project-title">SaaS Analytics Dashboard</h3>
-              <p style="font-size:0.8rem; color:var(--text-muted);">
-                Marketing site and mini dashboard for a SaaS analytics product.
-              </p>
-              <div class="project-tags">
-                <span>Next.js</span>
-                <span>Tailwind</span>
-                <span>Chart.js</span>
-              </div>
-              <div class="project-footer">
-                <div class="project-links">
-                  <a href="#" target="_blank">Live</a>
-                  <a href="#" target="_blank">Code</a>
-                </div>
-                <span><i class="fa-regular fa-clock"></i> 2 weeks</span>
-              </div>
-            </article>
+    <div class="contact-card">
+      <span class="section-kicker">Let’s talk</span>
+      <h3>Let’s discuss something cool together</h3>
+      <p>
+        Have a project or need help? Feel free to reach out and I’ll respond within 24 hours.
+      </p>
 
-            <!-- Project 2 -->
-            <article class="project-card">
-              <div class="project-thumb"></div>
-              <div class="project-meta">
-                <span>Web app</span>
-                <span>2023</span>
-              </div>
-              <h3 class="project-title">Task Management Board</h3>
-              <p style="font-size:0.8rem; color:var(--text-muted);">
-                Kanban-style productivity app with drag-and-drop interaction.
-              </p>
-              <div class="project-tags">
-                <span>React</span>
-                <span>TypeScript</span>
-                <span>Firebase</span>
-              </div>
-              <div class="project-footer">
-                <div class="project-links">
-                  <a href="#" target="_blank">Live</a>
-                  <a href="#" target="_blank">Code</a>
-                </div>
-                <span><i class="fa-regular fa-clock"></i> 3 weeks</span>
-              </div>
-            </article>
-
-            <!-- Project 3 -->
-            <article class="project-card">
-              <div class="project-thumb"></div>
-              <div class="project-meta">
-                <span>UI concept</span>
-                <span>2023</span>
-              </div>
-              <h3 class="project-title">Finance Mobile UI</h3>
-              <p style="font-size:0.8rem; color:var(--text-muted);">
-                Exploration of a modern mobile banking interface and flows.
-              </p>
-              <div class="project-tags">
-                <span>Figma</span>
-                <span>Prototyping</span>
-              </div>
-              <div class="project-footer">
-                <div class="project-links">
-                  <a href="#" target="_blank">Preview</a>
-                </div>
-                <span><i class="fa-regular fa-clock"></i> Concept</span>
-              </div>
-            </article>
-
-            <!-- Project 4 -->
-            <article class="project-card">
-              <div class="project-thumb"></div>
-              <div class="project-meta">
-                <span>Brand site</span>
-                <span>2022</span>
-              </div>
-              <h3 class="project-title">Burger House Website</h3>
-              <p style="font-size:0.8rem; color:var(--text-muted);">
-                Playful restaurant website with menu browsing and online ordering CTA.
-              </p>
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>SCSS</span>
-                <span>Alpine.js</span>
-              </div>
-              <div class="project-footer">
-                <div class="project-links">
-                  <a href="#" target="_blank">Live</a>
-                  <a href="#" target="_blank">Code</a>
-                </div>
-                <span><i class="fa-regular fa-clock"></i> 10 days</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="contact-section">
-        <div class="container contact-layout reveal">
-          <div class="contact-card">
-            <span class="section-kicker">Let’s talk</span>
-            <h3>Let’s discuss something cool together</h3>
-            <p>
-              Have a project in mind or just want to say hi? Drop a message and let’s
-              explore how we can build something great for the web.
-            </p>
-
-            <div class="chip-row">
-              <span class="chip chip--solid">Available for freelance</span>
-              <span class="chip chip--solid">Available for Technical Help</span>
-            
-            </div>
-
-            <form>
-              <div class="form-field">
-                <label for="name">Your name</label>
-                <input id="name" type="text" placeholder="John Doe" />
-              </div>
-              <div class="form-field">
-                <label for="email">Email address</label>
-                <input id="email" type="email" placeholder="you@example.com" />
-              </div>
-              <div class="form-field">
-                <label for="message">Project details</label>
-                <textarea id="message" placeholder="Tell me a bit about your project..."></textarea>
-              </div>
-              <button class="btn-submit" type="submit">
-                Submit
-                <i class="fa-solid fa-arrow-turn-up"></i>
-              </button>
-            </form>
-
-            <p class="contact-meta">
-              Or email me directly at
-              <a href="mailto:abhishekverma.rjasv@gmail.com">abhishekverma.rjasv@gmail.com</a>
-            </p>
-          </div>
-
-         <aside class="contact-visual reveal">
-  <div class="contact-visual-inner timeline-wrapper">
-
-    <h3 class="timeline-title">Project Journey</h3>
-
-    <div class="timeline-modern">
-
-      <div class="timeline-row">
-        <div class="timeline-dot"></div>
-        <div class="timeline-line"></div>
-        <div class="timeline-box">
-          <h4>Project Discussion</h4>
-          <p>Understanding your idea, needs and project vision clearly.</p>
-        </div>
+      <div class="chip-row">
+        <span class="chip chip--solid">Available for freelance</span>
+        <span class="chip chip--solid">Available for Technical Help</span>
       </div>
 
-      <div class="timeline-row">
-        <div class="timeline-dot"></div>
-        <div class="timeline-line"></div>
-        <div class="timeline-box">
-          <h4>Research & Planning</h4>
-          <p>Creating workflow, feature map, and development strategy.</p>
+      <form>
+        <div class="form-field">
+          <label>Your name</label>
+          <input type="text" placeholder="John Doe" />
         </div>
-      </div>
 
-      <div class="timeline-row">
-        <div class="timeline-dot"></div>
-        <div class="timeline-line"></div>
-        <div class="timeline-box">
-          <h4>Design & Development</h4>
-          <p>UI creation + converting into responsive frontend code.</p>
+        <div class="form-field">
+          <label>Email address</label>
+          <input type="email" placeholder="you@example.com" />
         </div>
-      </div>
 
-      <div class="timeline-row">
-        <div class="timeline-dot"></div>
-        <div class="timeline-line"></div>
-        <div class="timeline-box">
-          <h4>Testing & Launch</h4>
-          <p>Final review, debugging & delivering the complete web solution.</p>
+        <div class="form-field">
+          <label>Project details</label>
+          <textarea placeholder="Tell me a bit about your project..."></textarea>
         </div>
-      </div>
 
+        <button class="btn-submit" type="submit">
+          Submit <i class="fa-solid fa-arrow-turn-up"></i>
+        </button>
+      </form>
+
+      <p class="contact-meta">
+        Or email me directly at  
+        <a href="mailto:abhishekverma.rjasv@gmail.com">
+          abhishekverma.rjasv@gmail.com
+        </a>
+      </p>
     </div>
 
-    <div class="contact-footer-meta" style="margin-top:1.4rem;">
-      <span><i class="fa-regular fa-clock"></i> Response time: under 24h</span>
-      <span><i class="fa-solid fa-location-dot"></i> Remote / Worldwide</span>
-    </div>
+    <!-- Timeline (unchanged) -->
+    <aside class="contact-visual reveal">
+      <div class="contact-visual-inner timeline-wrapper">
+        <h3 class="timeline-title">Project Journey</h3>
 
-  </div>
-</aside>
+        <div class="timeline-modern">
+          <div class="timeline-row">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+            <div class="timeline-box">
+              <h4>Project Discussion</h4>
+              <p>Understanding your idea, needs and project vision clearly.</p>
+            </div>
+          </div>
 
+          <div class="timeline-row">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+            <div class="timeline-box">
+              <h4>Research & Planning</h4>
+              <p>Creating workflow, feature map, and development strategy.</p>
+            </div>
+          </div>
+
+          <div class="timeline-row">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+            <div class="timeline-box">
+              <h4>Design & Development</h4>
+              <p>UI creation + converting into responsive frontend code.</p>
+            </div>
+          </div>
+
+          <div class="timeline-row">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+            <div class="timeline-box">
+              <h4>Testing & Launch</h4>
+              <p>Final review, debugging & delivering the complete web solution.</p>
+            </div>
+          </div>
         </div>
-      </section>
-    </main>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="container footer-inner">
-        <span>© <span id="year"></span> Abhi - The Engineer. All rights reserved.</span>
-        <div class="footer-socials">
-          <a href="https://github.com/Abhishekvermarj" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/abhishek-verma-1b267422a" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="instagram.com/rj_abhi" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <div class="contact-footer-meta">
+          <span><i class="fa-regular fa-clock"></i> Response time: under 24h</span>
+          <span><i class="fa-solid fa-location-dot"></i> Remote / Worldwide</span>
         </div>
       </div>
-    </footer>
-  </div>
+    </aside>
 
-  <script>
-    
-// Flip on click
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Abhi - The Engineer. All rights reserved.</span>
+    <div class="footer-socials">
+      <a href="https://github.com/Abhishekvermarj"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/abhishek-verma-1b267422a"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="instagram.com/rj_abhi"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+</main>
+</div>
+
+<script>
 document.getElementById("flipCard").addEventListener("click", () => {
   document.getElementById("flipCard").classList.toggle("flipped");
 });
 
-    /* ---------------------------
-   Scroll Reveal Animation
----------------------------- */
 const revealElements = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
-
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("show"); });
+},{ threshold:0.2 });
 revealElements.forEach(el => observer.observe(el));
-  
-const toggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav-links');
 
-toggle.addEventListener('click', () => {
-  nav.classList.toggle("open");
+document.querySelector('.nav-toggle').addEventListener('click', () => {
+  document.querySelector('.nav-links').classList.toggle("open");
 });
 
-    // Set current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
