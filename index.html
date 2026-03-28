@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Abhishek Verma - Full Stack Developer Portfolio">
-    <meta name="keywords" content="developer, portfolio, web development, full stack">
-    <title>Abhishek Verma | Portfolio</title>
+    <meta name="description" content="Abhishek Verma - Developer Portfolio | Spider-Man Brand New Day Theme">
+    <meta name="keywords" content="developer, portfolio, web development, Abhishek Verma">
+    <title>Abhishek Verma | Web Slinger Developer</title>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,11 +23,16 @@
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="spider-loader">
+                <div class="web-line"></div>
+                <div class="spider-icon">🕷️</div>
+            </div>
+            <p class="loader-text">With great power comes great responsibility...</p>
         </div>
     </div>
+
+    <!-- Web Particle Canvas -->
+    <canvas id="webCanvas"></canvas>
 
     <!-- Cursor -->
     <div class="cursor"></div>
@@ -37,23 +42,28 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <span class="logo-text">&lt;AV /&gt;</span>
+                <span class="logo-text">
+                    <span class="spider-bracket">&lt;</span>AV<span class="spider-bracket"> /&gt;</span>
+                </span>
             </a>
             
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link active"><i class="fas fa-spider web-icon"></i>Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-mask web-icon"></i>About</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-bolt web-icon"></i>Skills</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-city web-icon"></i>Projects</a></li>
+                <li><a href="#experience" class="nav-link"><i class="fas fa-newspaper web-icon"></i>Experience</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-satellite-dish web-icon"></i>Contact</a></li>
             </ul>
             
             <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Spider-Sense">
+                    <i class="fas fa-spider"></i>
                 </button>
-                <a href="#contact" class="btn btn-primary nav-btn">Hire Me</a>
+                <a href="#contact" class="btn btn-primary nav-btn">
+                    <span class="btn-web"></span>
+                    Hire Me
+                </a>
             </div>
             
             <div class="hamburger" id="hamburger">
@@ -66,27 +76,45 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-particles" id="particles"></div>
+        <div class="hero-bg-effects">
+            <div class="web-corner web-corner-tl"></div>
+            <div class="web-corner web-corner-tr"></div>
+            <div class="web-corner web-corner-bl"></div>
+            <div class="web-corner web-corner-br"></div>
+            <div class="floating-webs">
+                <span class="web-strand" style="--i:1">🕸️</span>
+                <span class="web-strand" style="--i:2">🕷️</span>
+                <span class="web-strand" style="--i:3">🕸️</span>
+                <span class="web-strand" style="--i:4">🕷️</span>
+                <span class="web-strand" style="--i:5">🕸️</span>
+            </div>
+        </div>
+        
         <div class="hero-container">
             <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <div class="comic-badge">
+                    <span>★ BRAND NEW DAY ★</span>
+                </div>
                 <p class="hero-greeting">
-                    <span class="wave">👋</span> Hello, I'm
+                    <span class="wave">🕷️</span> Hey there, I'm
                 </p>
                 <h1 class="hero-title">
-                    <span class="gradient-text">Abhishek Verma</span>
+                    <span class="spidey-text">Abhishek</span>
+                    <span class="spidey-text-outline">Verma</span>
                 </h1>
                 <div class="hero-subtitle">
                     <span class="typing-text" id="typingText"></span>
                     <span class="cursor-blink">|</span>
                 </div>
                 <p class="hero-description">
-                    Passionate developer crafting beautiful, functional, and user-centered digital experiences. 
-                    I bring ideas to life through clean code and creative solutions.
+                    Your friendly neighborhood developer! I swing through code and craft 
+                    web experiences with the precision of a web-slinger. From .NET Blazor to 
+                    responsive frontends — I build it all!
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
                         <span>View My Work</span>
-                        <i class="fas fa-arrow-right"></i>
+                        <i class="fas fa-spider"></i>
                     </a>
                     <a href="#contact" class="btn btn-outline">
                         <span>Let's Talk</span>
@@ -97,108 +125,146 @@
                     <a href="https://github.com/abhishekvermarj" target="_blank" class="social-link" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/abhishekverma" target="_blank" class="social-link" title="LinkedIn">
+                    <a href="https://linkedin.com/in/abhishek-verma-1b267422a/" target="_blank" class="social-link" title="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://twitter.com/abhishekverma" target="_blank" class="social-link" title="Twitter">
-                        <i class="fab fa-twitter"></i>
+                    <a href="https://instagram.com/rj._.abhi" target="_blank" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="mailto:abhishek@example.com" class="social-link" title="Email">
+                    <a href="mailto:abhishekvermarjasv@gmail.com" class="social-link" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
             <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
                 <div class="image-wrapper">
-                    <div class="image-border"></div>
+                    <div class="spidey-frame">
+                        <svg class="web-border" viewBox="0 0 400 400">
+                            <circle cx="200" cy="200" r="190" fill="none" stroke="var(--spidey-red)" stroke-width="3" stroke-dasharray="15 10"/>
+                            <circle cx="200" cy="200" r="170" fill="none" stroke="var(--spidey-blue)" stroke-width="1" stroke-dasharray="8 6"/>
+                        </svg>
+                    </div>
                     <div class="profile-img">
                         <img src="Abhishek.png" alt="Abhishek Verma" 
-                             onerror="this.src='https://ui-avatars.com/api/?name=Abhishek+Verma&size=400&background=6366f1&color=fff&bold=true'">
+                             onerror="this.src='https://ui-avatars.com/api/?name=Abhishek+Verma&size=400&background=d32f2f&color=fff&bold=true'">
                     </div>
-                    <div class="floating-badge badge-1">
-                        <i class="fas fa-terminal"></i>
+                    <div class="floating-badge badge-1 spidey-badge">
+                        <i class="fas fa-code"></i>
                     </div>
-                    <div class="floating-badge badge-2">
-                        <i class="fab fa-linux"></i>
+                    <div class="floating-badge badge-2 spidey-badge">
+                        <span>C#</span>
                     </div>
-                    <div class="floating-badge badge-3">
+                    <div class="floating-badge badge-3 spidey-badge">
                         <i class="fab fa-python"></i>
+                    </div>
+                    <div class="floating-badge badge-4 spidey-badge">
+                        <i class="fab fa-html5"></i>
                     </div>
                 </div>
             </div>
         </div>
         
+        <div class="hero-scroll-indicator">
+            <div class="scroll-web-line"></div>
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
+        <div class="section-web-decoration"></div>
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Get To Know</span>
-                <h2 class="section-title">About Me</h2>
+                <span class="section-subtitle">
+                    <i class="fas fa-spider"></i> Unmasked <i class="fas fa-spider"></i>
+                </span>
+                <h2 class="section-title comic-title">About Me</h2>
             </div>
             
             <div class="about-content">
                 <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="about-img-wrapper">
+                    <div class="about-img-wrapper comic-frame">
                         <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?w=500" alt="Coding workspace">
-                        <div class="experience-badge">
-                            <span class="exp-number">3+</span>
-                            <span class="exp-text">Years<br>Experience</span>
+                        <div class="experience-badge spidey-exp-badge">
+                            <span class="exp-number">1+</span>
+                            <span class="exp-text">Year<br>Experience</span>
                         </div>
+                        <div class="comic-dots"></div>
                     </div>
                 </div>
                 
                 <div class="about-info" data-aos="fade-left" data-aos-duration="1000">
                     <div class="about-cards">
-                        <div class="about-card">
-                            <i class="fas fa-award"></i>
+                        <div class="about-card spidey-card">
+                            <i class="fas fa-briefcase"></i>
                             <h3>Experience</h3>
-                            <p>3+ Years Working</p>
+                            <p>1+ Year Working</p>
                         </div>
-                        <div class="about-card">
-                            <i class="fas fa-users"></i>
-                            <h3>Clients</h3>
-                            <p>20+ Worldwide</p>
+                        <div class="about-card spidey-card">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Tech Stack</h3>
+                            <p>C#, .NET, Python</p>
                         </div>
-                        <div class="about-card">
-                            <i class="fas fa-folder-open"></i>
-                            <h3>Projects</h3>
-                            <p>50+ Completed</p>
+                        <div class="about-card spidey-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Education</h3>
+                            <p>B.Tech CSE</p>
                         </div>
                     </div>
                     
-                    <p class="about-text">
-                        I'm a passionate Full Stack Developer based in India with a strong foundation in 
-                        building scalable web applications. I specialize in JavaScript ecosystems including 
-                        React, Node.js, and modern frameworks.
-                    </p>
-                    <p class="about-text">
-                        My journey in tech started with curiosity and has evolved into a career dedicated to 
-                        creating impactful digital solutions. I believe in writing clean, maintainable code 
-                        and staying updated with the latest industry trends.
-                    </p>
+                    <div class="speech-bubble">
+                        <p class="about-text">
+                            I'm a passionate developer from <strong>Unnao, India</strong>, currently working as an 
+                            <strong>Assistant Engineer - Product Development</strong> at Polar Bear Inc. (Edubuddy). 
+                            I specialize in building web applications using <strong>C#, .NET Blazor framework</strong>, 
+                            and crafting responsive frontends with HTML5, CSS3, and JavaScript.
+                        </p>
+                        <p class="about-text">
+                            My journey in tech started with curiosity and has grown into a career dedicated to 
+                            creating impactful digital solutions. From EdTech platforms to SEO strategies, 
+                            I believe in versatility — just like a certain web-slinger! 🕷️
+                        </p>
+                    </div>
                     
                     <div class="about-details">
                         <div class="detail-item">
-                            <span class="detail-label">Name:</span>
+                            <span class="detail-label">🕷️ Name:</span>
                             <span class="detail-value">Abhishek Verma</span>
                         </div>
                         <div class="detail-item">
-                            <span class="detail-label">Email:</span>
-                            <span class="detail-value">abhishek.vermarjasv@gmail.com</span>
+                            <span class="detail-label">📧 Email:</span>
+                            <span class="detail-value">abhishekvermarjasv@gmail.com</span>
                         </div>
                         <div class="detail-item">
-                            <span class="detail-label">Location:</span>
-                            <span class="detail-value">Kanpur, India</span>
+                            <span class="detail-label">📍 Location:</span>
+                            <span class="detail-value">Unnao / Kanpur, India</span>
                         </div>
                         <div class="detail-item">
-                            <span class="detail-label">Availability:</span>
-                            <span class="detail-value available">Open to Work</span>
+                            <span class="detail-label">🎂 DOB:</span>
+                            <span class="detail-value">24 June 2003</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">🎓 Degree:</span>
+                            <span class="detail-value">B.Tech CSE (7.54 CGPA)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">✅ Availability:</span>
+                            <span class="detail-value available">Open to Opportunities</span>
+                        </div>
+                    </div>
+
+                    <div class="personal-strengths">
+                        <h4>🕷️ Personal Strengths</h4>
+                        <div class="strength-tags">
+                            <span class="strength-tag">Flexible & Quick Learner</span>
+                            <span class="strength-tag">Logical & Analytical</span>
+                            <span class="strength-tag">Patient & Calm</span>
+                            <span class="strength-tag">Deep Focus</span>
                         </div>
                     </div>
                     
-                    <a href="CV.pdf" class="btn btn-primary" download Target="blank">
+                    <a href="CV.pdf" class="btn btn-primary" download target="_blank">
                         <span>Download CV</span>
                         <i class="fas fa-download"></i>
                     </a>
@@ -211,177 +277,205 @@
     <section id="skills" class="skills section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">My Abilities</span>
-                <h2 class="section-title">Technical Skills</h2>
+                <span class="section-subtitle">
+                    <i class="fas fa-spider"></i> Web-Slinging Abilities <i class="fas fa-spider"></i>
+                </span>
+                <h2 class="section-title comic-title">Technical Skills</h2>
             </div>
             
             <div class="skills-content">
-                <!-- Frontend Skills -->
+                <!-- Programming Languages -->
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="category-title">
-                        <i class="fas fa-palette"></i>
-                        Frontend Development
+                    <h3 class="category-title spidey-category">
+                        <i class="fas fa-code"></i>
+                        Programming Languages
                     </h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
+                        <div class="skill-item spidey-skill">
                             <div class="skill-icon">
-                                <i class="fab fa-html5"></i>
+                                <span style="font-weight:700;font-size:1.2rem">C</span>
                             </div>
-                            <span class="skill-name">HTML5</span>
+                            <span class="skill-name">C Language</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
+                                <div class="skill-progress" data-progress="80"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item spidey-skill">
                             <div class="skill-icon">
-                                <i class="fab fa-css3-alt"></i>
+                                <span style="font-weight:700;font-size:1rem">C++</span>
                             </div>
-                            <span class="skill-name">CSS3/SASS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-js-square"></i>
-                            </div>
-                            <span class="skill-name">JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="92"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-react"></i>
-                            </div>
-                            <span class="skill-name">React.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-vuejs"></i>
-                            </div>
-                            <span class="skill-name">Vue.js</span>
+                            <span class="skill-name">C++</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="75"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind">
-                            </div>
-                            <span class="skill-name">Tailwind CSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Backend Skills -->
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="category-title">
-                        <i class="fas fa-server"></i>
-                        Backend Development
-                    </h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-node-js"></i>
-                            </div>
-                            <span class="skill-name">Node.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
+                        <div class="skill-item spidey-skill">
                             <div class="skill-icon">
                                 <i class="fab fa-python"></i>
                             </div>
                             <span class="skill-name">Python</span>
                             <div class="skill-bar">
+                                <div class="skill-progress" data-progress="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item spidey-skill">
+                            <div class="skill-icon">
+                                <span style="font-weight:700;font-size:1rem">C#</span>
+                            </div>
+                            <span class="skill-name">C# / .NET</span>
+                            <div class="skill-bar">
                                 <div class="skill-progress" data-progress="82"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item spidey-skill">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" style="width:28px;">
                             </div>
-                            <span class="skill-name">Express.js</span>
+                            <span class="skill-name">Dart</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                                <div class="skill-progress" data-progress="60"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item spidey-skill">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                                <i class="fab fa-js-square"></i>
                             </div>
-                            <span class="skill-name">MongoDB</span>
+                            <span class="skill-name">JavaScript</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
-                            </div>
-                            <span class="skill-name">PostgreSQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-fire"></i>
-                            </div>
-                            <span class="skill-name">Firebase</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="78"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Tools & Others -->
+                <!-- Web Development -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="category-title spidey-category">
+                        <i class="fas fa-globe"></i>
+                        Web Development
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item spidey-skill">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item spidey-skill">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item spidey-skill">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET" style="width:28px;">
+                            </div>
+                            <span class="skill-name">ASP.NET / Blazor</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item spidey-skill">
+                            <div class="skill-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Cloud -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="250">
+                    <h3 class="category-title spidey-category">
+                        <i class="fas fa-database"></i>
+                        Database & Cloud
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item spidey-skill">
+                            <div class="skill-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <span class="skill-name">Firebase</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="72"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item spidey-skill">
+                            <div class="skill-icon">
+                                <img width="28" height="28" src="https://img.icons8.com/color/48/azure-storage-explorer.png" alt="Azure">
+                            </div>
+                            <span class="skill-name">Azure Storage</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="68"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools & Technologies -->
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="category-title">
+                    <h3 class="category-title spidey-category">
                         <i class="fas fa-tools"></i>
                         Tools & Technologies
                     </h3>
                     <div class="tools-grid">
-                        <div class="tool-item" title="Git">
+                        <div class="tool-item spidey-tool" title="Git">
                             <i class="fab fa-git-alt"></i>
                             <span>Git</span>
                         </div>
-                        <div class="tool-item" title="GitHub">
+                        <div class="tool-item spidey-tool" title="GitHub">
                             <i class="fab fa-github"></i>
                             <span>GitHub</span>
                         </div>
-                        <div class="tool-item" title="Docker">
-                            <i class="fab fa-docker"></i>
-                            <span>Docker</span>
-                        </div>
-                        <div class="tool-item" title="AWS">
-                            <i class="fab fa-aws"></i>
-                            <span>AWS</span>
-                        </div>
-                        <div class="tool-item" title="VS Code">
+                        <div class="tool-item spidey-tool" title="VS Code">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
                             <span>VS Code</span>
                         </div>
-                        <div class="tool-item" title="Figma">
-                            <i class="fab fa-figma"></i>
-                            <span>Figma</span>
+                        <div class="tool-item spidey-tool" title="Visual Studio">
+                            <img width="36" height="36" src="https://img.icons8.com/fluency/48/visual-studio.png" alt="Visual Studio">
+                            <span>Visual Studio</span>
                         </div>
-                        <div class="tool-item" title="Linux">
+                        <div class="tool-item spidey-tool" title="Linux">
                             <i class="fab fa-linux"></i>
                             <span>Linux</span>
                         </div>
-                        <div class="tool-item" title="Postman">
-                            <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman">
-                            <span>Postman</span>
+                        <div class="tool-item spidey-tool" title="SEO">
+                            <i class="fas fa-search"></i>
+                            <span>SEO/SMO</span>
+                        </div>
+                        <div class="tool-item spidey-tool" title="Azure">
+                            <img width="36" height="36" src="https://img.icons8.com/color/48/azure-storage-explorer.png" alt="Azure">
+                            <span>Azure</span>
+                        </div>
+                        <div class="tool-item spidey-tool" title="AI Tools">
+                            <img width="36" height="36" src="https://img.icons8.com/fluency/48/bard.png" alt="AI">
+                            <span>AI Tools</span>
+                        </div>
+                        <div class="tool-item spidey-tool" title="Bash Scripting">
+                            <i class="fas fa-terminal"></i>
+                            <span>Bash/Batch</span>
+                        </div>
+                        <div class="tool-item spidey-tool" title="MS Office">
+                            <i class="fab fa-microsoft"></i>
+                            <span>MS Office</span>
+                        </div>
+                        <div class="tool-item spidey-tool" title="Video Editing">
+                            <i class="fas fa-video"></i>
+                            <span>Video Editing</span>
+                        </div>
+                        <div class="tool-item spidey-tool" title="Prompt Engineering">
+                            <i class="fas fa-robot"></i>
+                            <span>Prompt Eng.</span>
                         </div>
                     </div>
                 </div>
@@ -393,28 +487,31 @@
     <section id="projects" class="projects section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">My Recent Work</span>
-                <h2 class="section-title">Featured Projects</h2>
+                <span class="section-subtitle">
+                    <i class="fas fa-spider"></i> Daily Bugle Headlines <i class="fas fa-spider"></i>
+                </span>
+                <h2 class="section-title comic-title">Featured Projects</h2>
             </div>
             
             <div class="projects-filter" data-aos="fade-up" data-aos-delay="100">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="web">Web Apps</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="design">UI/UX</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="major">Major</button>
             </div>
             
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                <!-- Project 1: FixMate -->
+                <div class="project-card spidey-project" data-category="major" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="E-Commerce Platform">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600" alt="FixMate">
+                        <div class="project-badge">★ MAJOR PROJECT</div>
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link" title="View Live">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="#" class="project-link" title="View Code">
+                                <a href="https://github.com/abhishekvermarj" class="project-link" title="View Code">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -422,28 +519,28 @@
                     </div>
                     <div class="project-info">
                         <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
+                            <span class="tag">Team Project</span>
+                            <span class="tag">Full Stack</span>
+                            <span class="tag">Platform</span>
                         </div>
-                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <h3 class="project-title">FixMate - Vehicle Repair Service</h3>
                         <p class="project-description">
-                            A full-featured e-commerce platform with user authentication, payment integration, 
-                            and admin dashboard for managing products and orders.
+                            On-demand vehicle repair service platform developed with my team. 
+                            A comprehensive solution connecting vehicle owners with repair professionals.
                         </p>
                     </div>
                 </div>
                 
-                <!-- Project 2 -->
-                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                <!-- Project 2: QR Code Generator -->
+                <div class="project-card spidey-project" data-category="web" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600" alt="Analytics Dashboard">
+                        <img src="https://images.unsplash.com/photo-1595079676601-f1adf5be5dee?w=600" alt="QR Code Generator">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link" title="View Live">
+                                <a href="https://Qrcodebanalo.tiiny.site/" target="_blank" class="project-link" title="View Live">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="#" class="project-link" title="View Code">
+                                <a href="https://github.com/abhishekvermarj" class="project-link" title="View Code">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -451,130 +548,128 @@
                     </div>
                     <div class="project-info">
                         <div class="project-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">D3.js</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">QR Code Banalo</h3>
+                        <p class="project-description">
+                            A web-based QR code generator that allows users to create QR codes 
+                            instantly. Simple, fast, and user-friendly interface.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Math Site -->
+                <div class="project-card spidey-project" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600" alt="Math Site">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://mathsite.tiiny.site/" target="_blank" class="project-link" title="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/abhishekvermarj" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Math</span>
+                        </div>
+                        <h3 class="project-title">Math Learning Site</h3>
+                        <p class="project-description">
+                            Interactive mathematics learning website with tools and resources 
+                            to help students understand math concepts better.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Binary Tic Tac Toe -->
+                <div class="project-card spidey-project" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=600" alt="Binary Tic Tac Toe">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://binarytictactoegame.tiiny.site/" target="_blank" class="project-link" title="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/abhishekvermarj" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Binary Tic Tac Toe Game</h3>
+                        <p class="project-description">
+                            A unique twist on the classic Tic Tac Toe game using binary numbers. 
+                            Fun and educational web-based game.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Air Hockey -->
+                <div class="project-card spidey-project" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=600" alt="Air Hockey">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://air-hockey.tiiny.site" target="_blank" class="project-link" title="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/abhishekvermarj" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">Canvas</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Air Hockey Game</h3>
+                        <p class="project-description">
+                            Browser-based air hockey game with smooth animations and 
+                            interactive gameplay mechanics.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Project 6: Arithmetic Game -->
+                <div class="project-card spidey-project" data-category="python" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600" alt="Python Tkinter Game">
+                        <div class="project-badge">COLLEGE PROJECT</div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/abhishekvermarj" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
                             <span class="tag">Python</span>
+                            <span class="tag">Tkinter</span>
+                            <span class="tag">GUI</span>
                         </div>
-                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <h3 class="project-title">Arithmetic Game & Binary Tic Tac Toe</h3>
                         <p class="project-description">
-                            Interactive data visualization dashboard with real-time analytics, 
-                            custom charts, and comprehensive reporting features.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card" data-category="mobile" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600" alt="Fitness App">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link" title="View Live">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="project-link" title="View Code">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">Redux</span>
-                        </div>
-                        <h3 class="project-title">Fitness Tracker App</h3>
-                        <p class="project-description">
-                            Mobile application for tracking workouts, nutrition, and health metrics 
-                            with personalized recommendations and progress charts.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="project-card" data-category="design" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600" alt="Brand Identity">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link" title="View Live">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="project-link" title="View Code">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">Figma</span>
-                            <span class="tag">UI/UX</span>
-                            <span class="tag">Branding</span>
-                        </div>
-                        <h3 class="project-title">SaaS Landing Page</h3>
-                        <p class="project-description">
-                            Modern and conversion-focused landing page design for a SaaS product 
-                            with attention to user experience and visual hierarchy.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Project 5 -->
-                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="Collaboration Tool">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link" title="View Live">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="project-link" title="View Code">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">Next.js</span>
-                            <span class="tag">Socket.io</span>
-                            <span class="tag">PostgreSQL</span>
-                        </div>
-                        <h3 class="project-title">Team Collaboration Tool</h3>
-                        <p class="project-description">
-                            Real-time collaboration platform with chat, file sharing, 
-                            task management, and video conferencing capabilities.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Project 6 -->
-                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600" alt="AI Chat Bot">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link" title="View Live">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="project-link" title="View Code">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">FastAPI</span>
-                        </div>
-                        <h3 class="project-title">AI Chatbot Platform</h3>
-                        <p class="project-description">
-                            Intelligent chatbot with natural language processing capabilities 
-                            for customer support and automated responses.
+                            College mini project featuring an arithmetic game and binary tic tac toe 
+                            built using Python Tkinter GUI framework.
                         </p>
                     </div>
                 </div>
@@ -582,7 +677,7 @@
             
             <div class="projects-cta" data-aos="fade-up">
                 <a href="https://github.com/abhishekvermarj" target="_blank" class="btn btn-outline">
-                    <span>View All Projects</span>
+                    <span>View All Projects on GitHub</span>
                     <i class="fab fa-github"></i>
                 </a>
             </div>
@@ -593,86 +688,124 @@
     <section id="experience" class="experience section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">My Journey</span>
-                <h2 class="section-title">Experience & Education</h2>
+                <span class="section-subtitle">
+                    <i class="fas fa-spider"></i> The Origin Story <i class="fas fa-spider"></i>
+                </span>
+                <h2 class="section-title comic-title">Experience & Education</h2>
             </div>
             
             <div class="timeline-container">
-                <div class="timeline">
-                    <!-- Experience Items -->
+                <div class="timeline spidey-timeline">
+                    <!-- Experience 1: Polar Bear -->
                     <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
-                        <div class="timeline-icon">
+                        <div class="timeline-icon spidey-timeline-icon">
                             <i class="fas fa-briefcase"></i>
                         </div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2023 - Present</span>
-                            <h3 class="timeline-title">Senior Full Stack Developer</h3>
-                            <h4 class="timeline-company">Tech Company Name</h4>
+                        <div class="timeline-content spidey-timeline-content">
+                            <span class="timeline-date">Nov 2024 - Present</span>
+                            <h3 class="timeline-title">Assistant Engineer - Product Development</h3>
+                            <h4 class="timeline-company">Polar Bear Inc. (Edubuddy)</h4>
                             <p class="timeline-description">
-                                Leading development of enterprise web applications, mentoring junior developers, 
-                                and implementing best practices for scalable architecture.
+                                Developed and maintained web applications using C#, .NET Blazor framework to support EdTech platform functionalities. 
+                                Performed internal product testing, identifying bugs and ensuring product stability before deployment. 
+                                Provided technical support to customers, resolving software-related queries. 
+                                Contributed to UI/UX improvements by integrating front-end features based on feedback and testing outcomes. 
+                                Assisted in debugging and optimizing application performance across different modules.
                             </p>
                             <div class="timeline-tags">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>AWS</span>
+                                <span>C#</span>
+                                <span>.NET Blazor</span>
+                                <span>Product Testing</span>
+                                <span>UI/UX</span>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Experience 2: Shuchit Infotek -->
                     <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
-                        <div class="timeline-icon">
+                        <div class="timeline-icon spidey-timeline-icon">
                             <i class="fas fa-briefcase"></i>
                         </div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2021 - 2023</span>
-                            <h3 class="timeline-title">Full Stack Developer</h3>
-                            <h4 class="timeline-company">Another Tech Company</h4>
+                        <div class="timeline-content spidey-timeline-content">
+                            <span class="timeline-date">Aug 2024 - Oct 2024</span>
+                            <h3 class="timeline-title">Frontend Developer (Remote)</h3>
+                            <h4 class="timeline-company">Shuchit Infotek</h4>
                             <p class="timeline-description">
-                                Developed and maintained multiple client projects, collaborated with design teams, 
-                                and integrated third-party APIs and services.
+                                Designed and developed responsive user interfaces using HTML5, CSS3, and JavaScript to ensure cross-browser and cross-device compatibility. 
+                                Built and maintained dynamic web pages and forms using PHP, integrating front-end features with back-end logic. 
+                                Collaborated closely with designers and backend developers to implement UI/UX improvements. 
+                                Implemented reusable components and modular code to improve development speed and maintainability.
                             </p>
                             <div class="timeline-tags">
-                                <span>Vue.js</span>
-                                <span>Python</span>
-                                <span>MongoDB</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
-                        <div class="timeline-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2020 - 2021</span>
-                            <h3 class="timeline-title">Frontend Developer Intern</h3>
-                            <h4 class="timeline-company">Startup Name</h4>
-                            <p class="timeline-description">
-                                Built responsive user interfaces, participated in agile development processes, 
-                                and gained hands-on experience with modern frontend technologies.
-                            </p>
-                            <div class="timeline-tags">
-                                <span>JavaScript</span>
-                                <span>React</span>
+                                <span>HTML5</span>
                                 <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Education Items -->
+                    <!-- Experience 3: K2 Technologies -->
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                        <div class="timeline-icon spidey-timeline-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content spidey-timeline-content">
+                            <span class="timeline-date">Feb 2024 - Mar 2024</span>
+                            <h3 class="timeline-title">SEO Executive Trainee</h3>
+                            <h4 class="timeline-company">K2 Technologies</h4>
+                            <p class="timeline-description">
+                                Executed comprehensive On-Page SEO strategies including keyword research, meta tag optimization, and internal linking. 
+                                Managed Off-Page SEO activities such as backlink building, directory submissions, and social bookmarking. 
+                                Conducted Technical SEO audits to identify and fix crawl errors, broken links, and mobile usability problems. 
+                                Used tools like Google Search Console, Analytics, Ahrefs, SEMrush, and Screaming Frog.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>SEO</span>
+                                <span>Google Analytics</span>
+                                <span>Ahrefs</span>
+                                <span>SEMrush</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Education: B.Tech -->
                     <div class="timeline-item education" data-aos="fade-left" data-aos-delay="400">
-                        <div class="timeline-icon">
+                        <div class="timeline-icon spidey-timeline-icon edu-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2016 - 2020</span>
-                            <h3 class="timeline-title">Bachelor of Technology</h3>
-                            <h4 class="timeline-company">Computer Science & Engineering</h4>
+                        <div class="timeline-content spidey-timeline-content">
+                            <span class="timeline-date">2021 - 2025</span>
+                            <h3 class="timeline-title">Bachelor of Technology (CSE)</h3>
+                            <h4 class="timeline-company">Vision Institute of Technology, Kanpur</h4>
                             <p class="timeline-description">
-                                Graduated with honors. Focused on software development, data structures, 
-                                algorithms, and web technologies.
+                                CGPA: 7.54 | Focused on Computer Science & Engineering with coursework in 
+                                data structures, algorithms, web technologies, and software development.
                             </p>
+                        </div>
+                    </div>
+
+                    <!-- Education: 12th -->
+                    <div class="timeline-item education" data-aos="fade-right" data-aos-delay="500">
+                        <div class="timeline-icon spidey-timeline-icon edu-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="timeline-content spidey-timeline-content">
+                            <span class="timeline-date">2021</span>
+                            <h3 class="timeline-title">12th Standard - 72%</h3>
+                            <h4 class="timeline-company">U.P. Board</h4>
+                        </div>
+                    </div>
+
+                    <!-- Education: 10th -->
+                    <div class="timeline-item education" data-aos="fade-left" data-aos-delay="600">
+                        <div class="timeline-icon spidey-timeline-icon edu-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="timeline-content spidey-timeline-content">
+                            <span class="timeline-date">2019</span>
+                            <h3 class="timeline-title">10th Standard - 83%</h3>
+                            <h4 class="timeline-company">U.P. Board</h4>
                         </div>
                     </div>
                 </div>
@@ -680,91 +813,42 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
+    <!-- Activities & Certifications Section -->
+    <section id="activities" class="activities section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">What Clients Say</span>
-                <h2 class="section-title">Testimonials</h2>
+                <span class="section-subtitle">
+                    <i class="fas fa-spider"></i> Side Quests <i class="fas fa-spider"></i>
+                </span>
+                <h2 class="section-title comic-title">Activities & Training</h2>
             </div>
             
-            <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="100">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="testimonial-text">
-                            "Abhishek is an exceptional developer who delivered our project on time with outstanding quality. 
-                            His attention to detail and problem-solving skills are remarkable."
-                        </p>
+            <div class="activities-grid">
+                <div class="activity-card spidey-activity" data-aos="fade-up" data-aos-delay="100">
+                    <div class="activity-icon">
+                        <i class="fas fa-certificate"></i>
                     </div>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
-                        <div class="author-info">
-                            <h4>John Smith</h4>
-                            <span>CEO, TechStartup</span>
-                        </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
+                    <h3>Rubicon's Employability & Life Skills Program</h3>
+                    <p>Participated in offline training session (01/06/2023 - 07/06/2023) on "Employability Skills" organized by Rubicon in collaboration with Vision Institute of Technology, Kanpur.</p>
+                    <span class="activity-date">June 2023</span>
                 </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="testimonial-text">
-                            "Working with Abhishek was a pleasure. He understood our requirements perfectly and 
-                            delivered a solution that exceeded our expectations. Highly recommended!"
-                        </p>
+
+                <div class="activity-card spidey-activity" data-aos="fade-up" data-aos-delay="200">
+                    <div class="activity-icon">
+                        <i class="fab fa-microsoft"></i>
                     </div>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <span>Product Manager, Corp</span>
-                        </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
+                    <h3>Microsoft Azure Workshop</h3>
+                    <p>Attended 3-day workshop on "Cloud Computing Services using Microsoft Azure" organized by Edubuddy at Vision Institute of Technology.</p>
+                    <span class="activity-date">Workshop</span>
                 </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="testimonial-text">
-                            "Abhishek's expertise in full-stack development helped us build a robust platform. 
-                            His communication and technical skills are top-notch."
-                        </p>
+
+                <div class="activity-card spidey-activity" data-aos="fade-up" data-aos-delay="300">
+                    <div class="activity-icon">
+                        <i class="fab fa-python"></i>
                     </div>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client">
-                        <div class="author-info">
-                            <h4>Mike Chen</h4>
-                            <span>CTO, WebAgency</span>
-                        </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
+                    <h3>IoT with Python Training</h3>
+                    <p>Attended the "Python programming with IoT" offline training session organized by "Softpro Software Solutions".</p>
+                    <span class="activity-date">Training</span>
                 </div>
             </div>
         </div>
@@ -774,63 +858,77 @@
     <section id="contact" class="contact section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Get In Touch</span>
-                <h2 class="section-title">Contact Me</h2>
+                <span class="section-subtitle">
+                    <i class="fas fa-spider"></i> Signal the Spider <i class="fas fa-spider"></i>
+                </span>
+                <h2 class="section-title comic-title">Contact Me</h2>
             </div>
             
             <div class="contact-content">
                 <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
-                    <h3>Let's talk about your project</h3>
-                    <p>
-                        I'm always open to discussing new projects, creative ideas, or opportunities 
-                        to be part of your vision. Feel free to reach out!
-                    </p>
+                    <div class="speech-bubble contact-speech">
+                        <h3>Let's build something <span class="spidey-highlight">amazing</span> together!</h3>
+                        <p>
+                            Whether you need a web application, want to discuss a project idea, or just want to say hi — 
+                            I'm always ready to swing into action! 🕷️
+                        </p>
+                    </div>
                     
                     <div class="contact-cards">
-                        <div class="contact-card">
+                        <div class="contact-card spidey-contact-card">
                             <div class="card-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="card-content">
                                 <h4>Email</h4>
-                                <a href="mailto:abhishek@example.com">abhishek@example.com</a>
+                                <a href="mailto:abhishekvermarjasv@gmail.com">abhishekvermarjasv@gmail.com</a>
                             </div>
                         </div>
                         
-                        <div class="contact-card">
+                        <div class="contact-card spidey-contact-card">
                             <div class="card-icon">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div class="card-content">
                                 <h4>Phone</h4>
-                                <a href="tel:+919876543210">+91 98765 43210</a>
+                                <a href="tel:+917607491616">+91 7607491616</a>
                             </div>
                         </div>
                         
-                        <div class="contact-card">
+                        <div class="contact-card spidey-contact-card">
                             <div class="card-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="card-content">
                                 <h4>Location</h4>
-                                <span>Rajasthan, India</span>
+                                <span>Sitaram Colony, Shuklaganj, Unnao, India</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-card spidey-contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Portfolio</h4>
+                                <a href="https://abhishekvermarj.github.io" target="_blank">abhishekvermarj.github.io</a>
                             </div>
                         </div>
                     </div>
                     
                     <div class="contact-social">
-                        <h4>Follow Me</h4>
+                        <h4>Follow the Web Trail</h4>
                         <div class="social-links">
                             <a href="https://github.com/abhishekvermarj" target="_blank" class="social-link">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#" target="_blank" class="social-link">
+                            <a href="https://linkedin.com/in/abhishek-verma-1b267422a/" target="_blank" class="social-link">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#" target="_blank" class="social-link">
-                                <i class="fab fa-twitter"></i>
+                            <a href="mailto:abhishekvermarjasv@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
                             </a>
-                            <a href="#" target="_blank" class="social-link">
+                            <a href="https://instagram.com/rj._.abhi" target="_blank" class="social-link">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
@@ -838,16 +936,16 @@
                 </div>
                 
                 <div class="contact-form-wrapper" data-aos="fade-left" data-aos-delay="200">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form spidey-form" id="contactForm" action="https://formspree.io/f/xnjjnebq" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                            <input type="text" id="name" name="name" required placeholder="Peter Parker">
                             <span class="focus-border"></span>
                         </div>
                         
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            <input type="email" id="email" name="email" required placeholder="peter@dailybugle.com">
                             <span class="focus-border"></span>
                         </div>
                         
@@ -864,7 +962,7 @@
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-submit">
-                            <span>Send Message</span>
+                            <span>Send Web Signal</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
@@ -874,7 +972,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer spidey-footer">
         <div class="footer-wave">
             <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
                 <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,69.3C960,85,1056,107,1152,106.7C1248,107,1344,85,1392,74.7L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
@@ -886,7 +984,7 @@
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <a href="#home" class="footer-logo">&lt;AV /&gt;</a>
-                        <p>Building digital experiences that make a difference. Let's create something amazing together.</p>
+                        <p>Your friendly neighborhood developer — building digital experiences that make a difference. With great code comes great responsibility! 🕷️</p>
                     </div>
                     
                     <div class="footer-links">
@@ -900,33 +998,30 @@
                     </div>
                     
                     <div class="footer-links">
-                        <h4>Services</h4>
+                        <h4>What I Do</h4>
                         <ul>
                             <li><a href="#">Web Development</a></li>
-                            <li><a href="#">Mobile Apps</a></li>
-                            <li><a href="#">UI/UX Design</a></li>
-                            <li><a href="#">Consulting</a></li>
+                            <li><a href="#">.NET Blazor Apps</a></li>
+                            <li><a href="#">Frontend Dev</a></li>
+                            <li><a href="#">SEO Optimization</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-newsletter">
                         <h4>Stay Updated</h4>
-                        <p>Subscribe to get updates on new projects and articles.</p>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="Enter your email">
-                            <button type="submit">
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </form>
+                        <p>Follow me on GitHub to stay updated with my latest projects.</p>
+                        <a href="https://github.com/abhishekvermarj" target="_blank" class="btn btn-outline" style="margin-top: 10px;">
+                            <i class="fab fa-github"></i> Follow on GitHub
+                        </a>
                     </div>
                 </div>
                 
                 <div class="footer-bottom">
-                    <p>&copy; 2024 Abhishek Verma. All rights reserved.</p>
+                    <p>&copy; 2024 Abhishek Verma. All rights reserved. | <span class="spidey-footer-text">Made with 🕷️ & ❤️</span></p>
                     <div class="footer-social">
                         <a href="https://github.com/abhishekvermarj" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/in/abhishek-verma-1b267422a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/rj._.abhi" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -934,8 +1029,9 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
+    <button id="backToTop" class="back-to-top spidey-back-top">
         <i class="fas fa-chevron-up"></i>
+        <span class="web-shoot"></span>
     </button>
 
     <!-- Scripts -->
