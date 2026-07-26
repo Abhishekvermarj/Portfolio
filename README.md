@@ -1,113 +1,171 @@
-Abhishek Verma — Developer Portfolio
+<div align="center">
 
-A responsive, Spider-Man-inspired personal portfolio website showcasing my skills, experience, projects, and contact information.
+🕷️ Abhishek Verma — Developer Portfolio
 
-Live Website
+A responsive Spider-Man-inspired portfolio built with HTML, CSS, and JavaScript
 
-abhishekvermarj.github.io
 
-About the Portfolio
 
-This portfolio presents my work as a developer with experience in C#, .NET, Blazor, Python, JavaScript, responsive frontend development, and related tools. The website uses a comic-book-inspired visual style with animations, interactive effects, project filtering, and a contact form.
+</div>
 
-Features
+👨‍💻 About This Portfolio
 
-Responsive layout for desktop, tablet, and mobile devices
+This repository contains my personal developer portfolio. It highlights my technical skills, professional experience, featured projects, education, and contact information through a modern comic-book-inspired interface.
 
-Spider-Man-inspired design and visual effects
+The website is fully responsive and includes animated sections, interactive effects, project filtering, a downloadable CV, and a working contact form.
 
-Animated page sections using AOS
+Live website: abhishekvermarj.github.io
 
-Custom cursor, preloader, and canvas effects
+✨ Key Features
 
-About, skills, projects, experience, and contact sections
+🕸️ Spider-Man-inspired responsive interface
 
-Filterable project gallery
+📱 Mobile, tablet, and desktop support
 
-Downloadable CV
+🎬 Scroll animations powered by AOS
 
-Contact form powered by Formspree
+🖱️ Custom cursor, preloader, and canvas effects
 
-Social links and direct email access
+🧑‍💻 About, skills, projects, experience, and contact sections
 
-Hosted with GitHub Pages
+🔎 Filterable featured-project cards
 
-Built With
+📄 Downloadable CV
 
-HTML5
+📬 Contact form connected with Formspree
 
-CSS3
+🔗 GitHub, LinkedIn, Instagram, and email links
 
-JavaScript
+🚀 Deployment through GitHub Pages
 
-AOS — Animate On Scroll
+🛠️ Tech Stack
+
+<div align="center">
+
+
+
+</div>
+
+Libraries and Services
+
+Tool
+
+Purpose
+
+AOS
+
+Scroll-based animations
 
 Font Awesome
 
+Icons
+
 Google Fonts
+
+Typography
 
 Formspree
 
+Contact-form submissions
+
 GitHub Pages
 
-Project Structure
+Static-site hosting
 
-.
-├── index.html       # Main page content and sections
-├── styles.css       # Layout, theme, responsive styling, and animations
-├── script.js        # Interactions, effects, filtering, and form behavior
+📁 Project Structure
+
+abhishekvermarj.github.io/
+├── index.html       # Main portfolio page and content
+├── styles.css       # Theme, layout, animations, and responsive styles
+├── script.js        # Interactions, effects, and project filtering
 ├── Abhishek.png     # Profile image
-├── CV.pdf           # Downloadable résumé/CV
+├── CV.pdf           # Downloadable CV
 └── README.md        # Project documentation
 
-Run Locally
+🚀 Run the Project Locally
 
-This is a static website, so no build step or package installation is required.
+No package installation or build command is required because this is a static website.
 
-Clone the repository:
+1. Clone the repository
 
 git clone https://github.com/Abhishekvermarj/abhishekvermarj.github.io.git
 
-Open the project directory:
+2. Open the project folder
 
 cd abhishekvermarj.github.io
 
-Open index.html directly in a browser, or start a local server:
+3. Start a local server
 
 python -m http.server 8000
 
-Visit http://localhost:8000.
+4. Open the website
 
-Customization
+Visit:
 
-Update portfolio text, projects, experience, and contact details in index.html.
+http://localhost:8000
 
-Modify colors, typography, spacing, and responsive rules in styles.css.
+You can also open index.html directly in a browser, but a local server is recommended.
 
-Update animations and interactive behavior in script.js.
+🎨 Customize the Portfolio
 
-Replace Abhishek.png with a new profile image while keeping the same filename, or update its path in index.html.
+File
 
-Replace CV.pdf with the latest CV while keeping the same filename, or update its link in index.html.
+What to update
 
-Update the Formspree endpoint in the contact form before using the site for another account.
+index.html
 
-Deployment
+Personal details, skills, projects, experience, and links
 
-The repository is configured as a GitHub Pages user site. Changes pushed to the main branch are published at:
+styles.css
 
-https://abhishekvermarj.github.io
+Colors, spacing, layout, animations, and responsiveness
 
-Contact
+script.js
+
+Interactive effects, typing text, filtering, and form behavior
+
+Abhishek.png
+
+Profile image
+
+CV.pdf
+
+Latest résumé or CV
+
+For the contact form, replace the existing Formspree endpoint inside index.html with your own Formspree form URL when reusing this project.
+
+🌐 Deployment
+
+This repository is a GitHub Pages user site. Files pushed to the main branch are published at:
+
+🔗 https://abhishekvermarj.github.io
+
+To deploy updates:
+
+git add .
+git commit -m "Update portfolio"
+git push origin main
+
+GitHub Pages will publish the latest changes automatically.
+
+📬 Contact
+
+<div align="center">
 
 Abhishek Verma
 
-GitHub: @abhishekvermarj
 
-LinkedIn: Abhishek Verma
 
-Email: abhishekvermarjasv@gmail.com
+</div>
 
-License
+📄 License and Usage
 
-This project is intended for use as Abhishek Verma's personal portfolio. Please contact the author before reusing the design or personal content.
+This repository is maintained as Abhishek Verma's personal portfolio. The source code may be used as a learning reference, but personal information, images, résumé content, and branding should not be copied without permission.
+
+<div align="center">
+
+🕷️ With great code comes great responsibility.
+
+Made with ❤️ by Abhishek Verma
+
+</div>
